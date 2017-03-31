@@ -43,8 +43,8 @@ class StatusMenuController: NSViewController, NSTableViewDataSource, NSTableView
         updateEvents(false)
         
         // Update events twice per day
-        //let interval: TimeInterval = 60 * 60 * 12
-        let interval: TimeInterval = 10
+        let interval: TimeInterval = 60 * 60 * 12
+        //let interval: TimeInterval = 10
         Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(updateEventsFromTimer), userInfo: nil, repeats: true)
     }
     
